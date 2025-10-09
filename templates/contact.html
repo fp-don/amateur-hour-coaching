@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - AmateurHour Coaching{% endblock %}
+
+{% block meta_description %}Get in touch with AmateurHour Coaching. Schedule a consultation to discuss your fitness goals and start your personalized training journey.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>Let's start your fitness journey together</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section section-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-7">
+                <div class="contact-form-wrapper">
+                    <span class="section-label">Send Us a Message</span>
+                    <h2>Schedule Your Free Consultation</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours to discuss your goals and how we can help you achieve them.</p>
+                    
+                    <form method="POST" action="{{ url_for('contact') }}" class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+                                <i class="fas fa-envelope form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 123-4567">
+                                <i class="fas fa-phone form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" class="form-control" rows="6" required placeholder="Tell us about your fitness goals, experience level, and what you're looking to achieve..."></textarea>
+                                <i class="fas fa-comment-alt form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-md-5">
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <p>Have questions? Reach out to us directly using the information below.</p>
+                        
+                        <div class="contact-info-items">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:amateurhourcoaching@gmail.com">amateurhourcoaching@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h4>Location</h4>
+                                    <p>Fargo, ND</p>
+                                    <span class="badge">Virtual Coaching Available Nationwide</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h4>Response Time</h4>
+                                    <p>Within 24 hours<br>Monday - Friday</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-contact">
+                            <h4>Follow Us</h4>
+                            <div class="social-links-contact">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links Card -->
+                    <div class="quick-links-card">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="{{ url_for('services') }}"><i class="fas fa-chevron-right"></i> View All Services</a></li>
+                            <li><a href="{{ url_for('about') }}"><i class="fas fa-chevron-right"></i> About Alyssa</a></li>
+                            <li><a href="{{ url_for('testimonials') }}"><i class="fas fa-chevron-right"></i> Client Success Stories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="contact-faq section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Common Questions</span>
+            <h2>Before You Reach Out</h2>
+            <p>Find quick answers to frequently asked questions</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="faq-item-simple">
+                    <h4><i class="fas fa-question-circle"></i> What happens after I submit the form?</h4>
+                    <p>You'll receive a response within 24 hours (Monday-Friday) to schedule a free consultation call where we'll discuss your goals and determine the best program for you.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="faq-item-simple">
+                    <h4><i class="fas fa-question-circle"></i> Is the initial consultation free?</h4>
+                    <p>Yes! The initial consultation is completely free with no obligation. It's an opportunity for us to get to know each other and see if we're a good fit.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="faq-item-simple">
+                    <h4><i class="fas fa-question-circle"></i> Do you offer virtual coaching?</h4>
+                    <p>Absolutely! While based in Fargo, ND, we offer virtual coaching services to clients nationwide. All you need is dedication and internet access.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="faq-item-simple">
+                    <h4><i class="fas fa-question-circle"></i> How soon can I start training?</h4>
+                    <p>Once we've completed your consultation and created your personalized plan, you can start training right away—often within a few days!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consultation CTA -->
+<section class="consultation-cta section-padding">
+    <div class="container">
+        <div class="consultation-box">
+            <div class="row align-center">
+                <div class="col-md-8">
+                    <h2>Not Ready to Fill Out a Form?</h2>
+                    <p>No problem! Send us a direct email and we'll take it from there.</p>
+                </div>
+                <div class="col-md-4 text-right">
+                    <a href="mailto:amateurhourcoaching@gmail.com" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-envelope"></i> Email Directly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Form validation and submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Basic client-side validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name || !email || !message) {
+                e.preventDefault();
+                alert('Please fill in all required fields.');
+                return false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return false;
+            }
+        });
+    }
+});
+</script>
+{% endblock %}
+

@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}About Alyssa - AmateurHour Coaching{% endblock %}
+
+{% block meta_description %}Meet Alyssa, founder of AmateurHour Coaching. ACSM-certified Exercise Physiologist, USAT Level I Triathlon Coach, Ironman finisher, and mother dedicated to helping you achieve your fitness goals.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>About Alyssa</h1>
+        <p>Your Partner in Achieving Fitness Excellence</p>
+    </div>
+</section>
+
+<!-- About Content -->
+<section class="about-content section-padding">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-md-5">
+                <div class="about-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/alyssa-coach.jpg') }}" alt="Alyssa - Founder of AmateurHour Coaching" class="about-main-image">
+                    <div class="about-badge">
+                        <i class="fas fa-medal"></i>
+                        <span>Ironman Finisher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="about-text">
+                    <span class="section-label">Meet Your Coach</span>
+                    <h2>Alyssa - Founder & Head Coach</h2>
+                    <p class="lead">From Fargo, ND, Alyssa brings a lifetime of athletic experience combined with professional expertise to help you achieve your fitness goals.</p>
+                    
+                    <p>Alyssa's journey in athletics began early with a passion for basketball, soccer, track, and cross-country. This love for sports led her to pursue a degree in Exercise Science at the University of Minnesota, where she earned her BS in Kinesiology.</p>
+                    
+                    <p>Her passion for endurance sports emerged during her college years, leading her to complete numerous marathons and triathlons. As an Ironman finisher herself, Alyssa understands firsthand the dedication, training, and mental fortitude required to achieve ambitious athletic goals.</p>
+                    
+                    <p>Balancing her roles as a coach, Ironman athlete, and mother, Alyssa deeply understands the challenges of integrating fitness into a busy life. She is dedicated to helping others achieve their fitness goals while maintaining balance with work, family, and personal commitments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Credentials Section -->
+<section class="credentials-section section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Professional Credentials</span>
+            <h2>Expertise You Can Trust</h2>
+            <p>Certified, experienced, and committed to your success</p>
+        </div>
+        
+        <div class="credentials-showcase">
+            <div class="credential-card">
+                <div class="credential-icon-large">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>ACSM-Certified Exercise Physiologist</h3>
+                <p>Recognized by the American College of Sports Medicine as an expert in exercise science and physiology</p>
+            </div>
+            
+            <div class="credential-card">
+                <div class="credential-icon-large">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>USAT Level I Triathlon Coach</h3>
+                <p>Certified by USA Triathlon to provide expert coaching for all levels of triathlon competition</p>
+            </div>
+            
+            <div class="credential-card">
+                <div class="credential-icon-large">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>BS in Kinesiology</h3>
+                <p>Degree in Exercise Science from the University of Minnesota</p>
+            </div>
+            
+            <div class="credential-card">
+                <div class="credential-icon-large">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>Ironman Finisher</h3>
+                <p>Personal experience competing in and completing one of the world's most challenging endurance events</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coaching Philosophy -->
+<section class="philosophy-section section-padding">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-md-6">
+                <div class="philosophy-content">
+                    <span class="section-label">Coaching Philosophy</span>
+                    <h2>Personalized, Practical, and Proven</h2>
+                    <p class="lead">At AmateurHour Coaching, we believe that fitness should enhance your life, not complicate it.</p>
+                    
+                    <div class="philosophy-points">
+                        <div class="philosophy-point">
+                            <div class="point-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Individualized Approach</h4>
+                                <p>Every athlete is unique. Programs are tailored to your specific goals, schedule, and lifestyle to ensure sustainable progress.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="philosophy-point">
+                            <div class="point-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Life Balance</h4>
+                                <p>Understanding the challenges of balancing family, work, and fitness, programs are designed to fit realistically into your busy life.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="philosophy-point">
+                            <div class="point-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Holistic Wellness</h4>
+                                <p>Combining exercise science, nutrition guidance, and mental support to help you reach your full potential.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="philosophy-point">
+                            <div class="point-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Ongoing Support</h4>
+                                <p>Providing continuous motivation, adjustments, and encouragement throughout your entire fitness journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="philosophy-image">
+                    <img src="{{ url_for('static', filename='images/training-philosophy.jpg') }}" alt="Training Philosophy">
+                    <div class="philosophy-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"I believe everyone deserves personalized coaching that fits their life and helps them achieve their goals, no matter how ambitious or modest."</p>
+                        <span>- Alyssa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Athletic Journey -->
+<section class="journey-section section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Athletic Journey</span>
+            <h2>From Athlete to Coach</h2>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-basketball-ball"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Early Athletic Years</h3>
+                    <span class="timeline-date">Growing Up in Fargo, ND</span>
+                    <p>Developed a love for sports through basketball, soccer, track, and cross-country competition.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Academic Excellence</h3>
+                    <span class="timeline-date">University of Minnesota</span>
+                    <p>Earned BS in Kinesiology and pursued Exercise Science, combining passion with professional expertise.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Endurance Sports</h3>
+                    <span class="timeline-date">Marathons & Triathlons</span>
+                    <p>Discovered passion for endurance sports, completing multiple marathons and triathlon events.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Ironman Achievement</h3>
+                    <span class="timeline-date">Ultimate Endurance Goal</span>
+                    <p>Completed an Ironman triathlon, gaining firsthand experience in the ultimate test of endurance.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Professional Certifications</h3>
+                    <span class="timeline-date">ACSM & USAT</span>
+                    <p>Became ACSM-certified Exercise Physiologist and USAT Level I Triathlon Coach.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>AmateurHour Coaching Founded</h3>
+                    <span class="timeline-date">Present Day</span>
+                    <p>Helping athletes of all levels achieve their goals while balancing life as a coach, athlete, and mother.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's discuss your goals and create a personalized training plan that fits your lifestyle</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+                <a href="{{ url_for('services') }}" class="btn btn-secondary btn-lg">View Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

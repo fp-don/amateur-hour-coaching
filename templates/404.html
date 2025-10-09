@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - AmateurHour Coaching{% endblock %}
+
+{% block content %}
+<section class="error-page section-padding">
+    <div class="container">
+        <div class="error-content text-center">
+            <div class="error-icon">
+                <i class="fas fa-running"></i>
+            </div>
+            <h1 class="error-code">404</h1>
+            <h2>Oops! Wrong Turn</h2>
+            <p>Looks like you've veered off course. The page you're looking for doesn't exist.</p>
+            <p>Don't worry—even the best athletes get lost sometimes!</p>
+            
+            <div class="error-buttons">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+            
+            <div class="quick-links-error">
+                <h4>Popular Pages:</h4>
+                <ul>
+                    <li><a href="{{ url_for('services') }}">Our Services</a></li>
+                    <li><a href="{{ url_for('about') }}">About Alyssa</a></li>
+                    <li><a href="{{ url_for('testimonials') }}">Client Success Stories</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.error-page {
+    min-height: calc(100vh - 400px);
+    display: flex;
+    align-items: center;
+}
+
+.error-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.error-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    animation: run 2s ease-in-out infinite;
+}
+
+@keyframes run {
+    0%, 100% { transform: translateX(-20px); }
+    50% { transform: translateX(20px); }
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.error-content h2 {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.error-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.quick-links-error {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.quick-links-error h4 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.quick-links-error ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-links-error a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.quick-links-error a:hover {
+    color: var(--secondary-color);
+}
+</style>
+{% endblock %}
+

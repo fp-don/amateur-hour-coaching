@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block title %}AmateurHour Coaching - Personalized Triathlon & Fitness Training{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="container">
+            <h1 class="hero-title animate-fade-in">Transform Your Fitness Journey</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Personalized training programs for triathlons, road races, and overall fitness</p>
+            <div class="hero-buttons animate-fade-in-delay-2">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get Started Today</a>
+                <a href="{{ url_for('services') }}" class="btn btn-secondary btn-lg">View Services</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section section-padding">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-md-6">
+                <div class="welcome-image">
+                    <img src="{{ url_for('static', filename='images/coach-placeholder.jpg') }}" alt="Alyssa - AmateurHour Coaching Founder">
+                    <div class="experience-badge">
+                        <div class="badge-content">
+                            <span class="badge-number">10+</span>
+                            <span class="badge-text">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="welcome-content">
+                    <span class="section-label">Welcome to AmateurHour Coaching</span>
+                    <h2>Achieve Your Fitness Goals with Expert Guidance</h2>
+                    <p>Whether you're training for your first triathlon, a road race, or seeking to improve overall fitness, AmateurHour Coaching offers structured and individualized programs designed to help you stay healthy, motivated, and accountable.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personalized Training Plans</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flexible Scheduling</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Expert Nutrition Guidance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ongoing Support & Motivation</span>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More About Alyssa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="services-overview section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">What We Offer</span>
+            <h2>Comprehensive Coaching Services</h2>
+            <p>Tailored programs designed to fit your schedule and help you achieve your goals</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service 1: Triathlon Coaching -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-swimmer"></i>
+                </div>
+                <h3>Triathlon Coaching</h3>
+                <p>Customized programs for swimming, biking, and running that prepare you to perform at your best on race day.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Tailored training plans</li>
+                    <li><i class="fas fa-check"></i> All skill levels welcome</li>
+                    <li><i class="fas fa-check"></i> Race day preparation</li>
+                </ul>
+                <a href="{{ url_for('services') }}#triathlon" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <!-- Service 2: Nutrition Guidance -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3>Nutrition Guidance</h3>
+                <p>Assistance in making healthy food choices to fuel your daily activities and training sessions effectively.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Personalized meal plans</li>
+                    <li><i class="fas fa-check"></i> Fueling strategies</li>
+                    <li><i class="fas fa-check"></i> Healthy eating habits</li>
+                </ul>
+                <a href="{{ url_for('services') }}#nutrition" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <!-- Service 3: Road Race Training -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h3>Road Race Training</h3>
+                <p>Programs designed for various running events, from 5Ks to marathons, customized to help you achieve your goals.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> 5K to Marathon training</li>
+                    <li><i class="fas fa-check"></i> Beginner to advanced</li>
+                    <li><i class="fas fa-check"></i> Goal-specific plans</li>
+                </ul>
+                <a href="{{ url_for('services') }}#road-race" class="btn btn-outline">Learn More</a>
+            </div>
+
+            <!-- Service 4: Custom Training Plans -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Custom Training Plans</h3>
+                <p>Comprehensive fitness plans developed to meet your individual objectives with a self-guided approach.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Self-guided programs</li>
+                    <li><i class="fas fa-check"></i> Flexible schedules</li>
+                    <li><i class="fas fa-check"></i> Goal-oriented design</li>
+                </ul>
+                <a href="{{ url_for('services') }}#custom" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose section-padding">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-md-6">
+                <div class="why-choose-content">
+                    <span class="section-label">Why Choose AmateurHour Coaching</span>
+                    <h2>Expert Coaching from an Experienced Athlete</h2>
+                    <p>Alyssa brings years of experience as an Ironman athlete, ACSM-certified Exercise Physiologist, and USAT Level I Triathlon Coach. As a working mother, she understands the challenges of balancing fitness with life's demands.</p>
+                    
+                    <div class="credentials-grid">
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>Ironman Finisher</h4>
+                                <p>Personal experience in endurance sports</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>ACSM Certified</h4>
+                                <p>Exercise Physiologist credentials</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>USAT Level I Coach</h4>
+                                <p>USA Triathlon certified coaching</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <div class="credential-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="credential-text">
+                                <h4>BS in Kinesiology</h4>
+                                <p>University of Minnesota</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3 class="stat-number" data-count="200">0</h3>
+                        <p>Clients Coached</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3 class="stat-number" data-count="1000">0</h3>
+                        <p>Training Plans Created</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <h3 class="stat-number" data-count="100">0</h3>
+                        <p>Success Stories</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3 class="stat-number" data-count="10">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Client Success Stories</span>
+            <h2>What Our Clients Say</h2>
+            <p>Read testimonials from athletes who have achieved their goals with AmateurHour Coaching</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Alyssa provided me unending support and alternative training approaches. I would highly recommend AmateurHour Coaching for anyone who wants to improve race times or who want to start their racing journey!"</p>
+                <div class="testimonial-author">
+                    <h4>Sarah M.</h4>
+                    <span>Marathon Runner</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The personalized training plan fit perfectly with my busy schedule as a working parent. Alyssa's motivation and expertise helped me complete my first triathlon!"</p>
+                <div class="testimonial-author">
+                    <h4>Mike J.</h4>
+                    <span>First-Time Triathlete</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Alyssa's extensive knowledge and supportive coaching style made all the difference. I've improved my fitness levels and overall well-being significantly!"</p>
+                <div class="testimonial-author">
+                    <h4>Jennifer L.</h4>
+                    <span>Fitness Enthusiast</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="{{ url_for('testimonials') }}" class="btn btn-primary">Read More Testimonials</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2>Ready to Start Your Fitness Journey?</h2>
+            <p>Get in touch today to schedule a consultation and learn how we can help you achieve your goals</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Schedule Consultation</a>
+                <a href="mailto:amateurhourcoaching@gmail.com" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

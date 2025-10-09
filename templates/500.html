@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - AmateurHour Coaching{% endblock %}
+
+{% block content %}
+<section class="error-page section-padding">
+    <div class="container">
+        <div class="error-content text-center">
+            <div class="error-icon">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            <h1 class="error-code">500</h1>
+            <h2>We Hit a Wall</h2>
+            <p>Something went wrong on our end. Don't worry, our team is working to fix it!</p>
+            <p>Even the best-trained athletes need a break sometimes. Please try again shortly.</p>
+            
+            <div class="error-buttons">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-envelope"></i> Report Issue
+                </a>
+            </div>
+            
+            <div class="error-info">
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                    <li>Wait a few minutes and try again</li>
+                    <li>Clear your browser cache</li>
+                    <li>Contact us if the problem persists</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.error-page {
+    min-height: calc(100vh - 400px);
+    display: flex;
+    align-items: center;
+}
+
+.error-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.error-icon {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.error-content h2 {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.error-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.error-info {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--bg-light);
+    border-radius: 15px;
+}
+
+.error-info strong {
+    color: var(--secondary-color);
+}
+
+.error-info ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.error-info li {
+    padding: 8px 0;
+    color: var(--text-light);
+}
+
+.error-info li::before {
+    content: '→ ';
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 8px;
+}
+</style>
+{% endblock %}
+
