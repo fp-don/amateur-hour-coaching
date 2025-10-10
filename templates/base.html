@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta_description %}AmateurHour Coaching - Personalized triathlon coaching, road race training, and fitness programs by ACSM-certified Exercise Physiologist and USAT Triathlon Coach Alyssa.{% endblock %}">
-    <meta name="keywords" content="triathlon coaching, road race training, marathon training, fitness coaching, nutrition guidance, personalized training plans, ACSM exercise physiologist, USAT triathlon coach">
+    <meta name="description" content="{% block meta_description %}AmateurHour Coaching - Dayton, Ohio fitness trainer and triathlon coach. Personalized running training, marathon coaching, and fitness programs. ACSM-certified Exercise Physiologist serving Dayton, OH area.{% endblock %}">
+    <meta name="keywords" content="fitness trainer Dayton Ohio, fitness coaching Dayton OH, running training Dayton, triathlon coach Dayton, marathon training Dayton Ohio, personal trainer Dayton, fitness coach near me, running coach Dayton OH, triathlon training Dayton, road race training, ACSM exercise physiologist, USAT triathlon coach, AmateurHour Coaching, Dayton fitness">
     <meta name="author" content="AmateurHour Coaching">
+    <meta name="geo.region" content="US-OH">
+    <meta name="geo.placename" content="Dayton">
+    <meta name="geo.position" content="39.7589;-84.1916">
+    <meta name="ICBM" content="39.7589, -84.1916">
     
-    <title>{% block title %}AmateurHour Coaching - Personalized Fitness & Triathlon Training{% endblock %}</title>
+    <title>{% block title %}AmateurHour Coaching - Personalized Fitness & Triathlon Training in Dayton, Ohio{% endblock %}</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="{% block og_title %}AmateurHour Coaching - Dayton Ohio Fitness Trainer{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Professional fitness coaching and triathlon training in Dayton, OH. Personalized programs for all fitness levels.{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/alyssa-coach.jpg', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.url }}">
+    <meta property="twitter:title" content="{% block twitter_title %}AmateurHour Coaching - Dayton Ohio Fitness Trainer{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}Professional fitness coaching and triathlon training in Dayton, OH. Personalized programs for all fitness levels.{% endblock %}">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/alyssa-coach.jpg', _external=True) }}">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
@@ -22,6 +40,79 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Structured Data for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "AmateurHour Coaching",
+        "image": "{{ url_for('static', filename='images/alyssa-coach.jpg', _external=True) }}",
+        "@id": "",
+        "url": "{{ request.url_root }}",
+        "telephone": "",
+        "email": "amateurhourcoaching@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Dayton",
+            "addressRegion": "OH",
+            "postalCode": "",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.7589,
+            "longitude": -84.1916
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "",
+            "",
+            ""
+        ],
+        "priceRange": "$$",
+        "description": "Professional fitness trainer and triathlon coach in Dayton, Ohio. Offering personalized running training, marathon coaching, triathlon programs, and custom fitness plans. ACSM-certified Exercise Physiologist and USAT Level I Triathlon Coach."
+    }
+    </script>
+    
+    <!-- Structured Data for Person (Coach) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alyssa",
+        "jobTitle": "Fitness Coach & Triathlon Trainer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "AmateurHour Coaching"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dayton",
+            "addressRegion": "OH",
+            "addressCountry": "US"
+        },
+        "alumniOf": "University of Minnesota",
+        "hasCredential": [
+            "ACSM-Certified Exercise Physiologist",
+            "USAT Level I Triathlon Coach",
+            "BS in Kinesiology"
+        ],
+        "description": "Ironman finisher, ACSM-certified Exercise Physiologist, and USAT Level I Triathlon Coach specializing in personalized fitness and triathlon training in Dayton, Ohio."
+    }
+    </script>
     
     {% block extra_css %}{% endblock %}
 </head>

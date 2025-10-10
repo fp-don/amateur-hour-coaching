@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.amateurhourcoaching.com/sitemap.xml
+
+# Disallow admin/system paths
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /*.pyc$
+

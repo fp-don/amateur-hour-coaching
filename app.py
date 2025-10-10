@@ -70,6 +70,16 @@ Message:
     
     return render_template('contact.html')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    """Generate sitemap for SEO"""
+    return render_template('sitemap.xml'), 200, {'Content-Type': 'application/xml'}
+
+@app.route('/robots.txt')
+def robots():
+    """Serve robots.txt for SEO"""
+    return app.send_static_file('robots.txt')
+
 @app.errorhandler(404)
 def page_not_found(e):
     """404 error handler"""
