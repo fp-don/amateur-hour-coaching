@@ -14,6 +14,34 @@ app.config.from_object('config.Config')
 # Initialize Flask-Mail
 mail = Mail(app)
 
+def contains_malicious_patterns(text):
+    """Check for obvious malicious patterns in user input"""
+    if not text:
+        return False
+    
+    # Common XSS attack patterns (case-insensitive)
+    malicious_patterns = [
+        r'<script[^>]*>',
+        r'javascript:',
+        r'onerror\s*=',
+        r'onload\s*=',
+        r'onclick\s*=',
+        r'onfocus\s*=',
+        r'onmouseover\s*=',
+        r'<iframe[^>]*>',
+        r'<object[^>]*>',
+        r'<embed[^>]*>',
+        r'eval\s*\(',
+        r'expression\s*\(',
+    ]
+    
+    text_lower = text.lower()
+    for pattern in malicious_patterns:
+        if re.search(pattern, text_lower):
+            return True
+    
+    return False
+
 @app.route('/')
 def index():
     """Homepage route"""
@@ -47,6 +75,11 @@ def contact():
         # Basic validation
         if not name or not email or not message:
             flash('Please fill in all required fields.', 'error')
+            return redirect(url_for('contact'))
+        
+        # Check for malicious patterns (blocks obvious attacks)
+        if contains_malicious_patterns(name) or contains_malicious_patterns(phone) or contains_malicious_patterns(message):
+            flash('Your submission contains invalid characters. Please remove any HTML or script tags and try again.', 'error')
             return redirect(url_for('contact'))
         
         # Email format validation
