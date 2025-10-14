@@ -115,7 +115,7 @@ def contact():
             return redirect(url_for('contact'))
         
         # Length validation (prevent abuse)
-        if len(name) > 100 or len(email) > 100 or len(phone) > 20 or len(message) > 2000:
+        if len(name) > 50 or len(email) > 100 or len(phone) > 15 or len(message) > 2000:
             flash('Form data exceeds maximum length. Please shorten your message.', 'error')
             return redirect(url_for('contact'))
         
