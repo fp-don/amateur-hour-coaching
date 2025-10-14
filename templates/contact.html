@@ -25,6 +25,7 @@
                     <p>Fill out the form below and we'll get back to you within 72 hours to discuss your goals and how we can help you achieve them.</p>
                     
                     <form method="POST" action="{{ url_for('contact') }}" class="contact-form" id="contactForm">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name <span class="required">*</span></label>

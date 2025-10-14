@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
+from flask_wtf.csrf import CSRFProtect
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from dotenv import load_dotenv
 from markupsafe import escape
 import os
@@ -13,6 +16,28 @@ app.config.from_object('config.Config')
 
 # Initialize Flask-Mail
 mail = Mail(app)
+
+# Initialize CSRF Protection
+csrf = CSRFProtect(app)
+
+# Initialize Rate Limiter
+limiter = Limiter(
+    app=app,
+    key_func=get_remote_address,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://"
+)
+
+# Add Security Headers
+@app.after_request
+def set_security_headers(response):
+    """Add security headers to all responses"""
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    response.headers['Content-Security-Policy'] = "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;"
+    return response
 
 def contains_malicious_patterns(text):
     """Check for obvious malicious patterns in user input"""
@@ -63,6 +88,7 @@ def testimonials():
     return render_template('testimonials.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
+@limiter.limit("5 per hour")  # Limit contact form submissions to 5 per hour per IP
 def contact():
     """Contact page route with form handling"""
     if request.method == 'POST':
