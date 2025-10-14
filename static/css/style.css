@@ -6,9 +6,9 @@
    1. ROOT VARIABLES & RESET
    =================================== */
 :root {
-    --primary-color: #1A659E;
-    --secondary-color: #004E89;
-    --accent-color: #2E8BC0;
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --accent-color: #0099ff;
     --text-dark: #1E1E1E;
     --text-light: #666666;
     --bg-light: #F7F9FC;
@@ -163,8 +163,17 @@ a:hover {
 
 .logo {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.logo-image {
+    height: 70px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    opacity: 0.8;
 }
 
 .logo-text {
@@ -315,7 +324,7 @@ a:hover {
     height: 100vh;
     min-height: 600px;
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-    background-image: linear-gradient(rgba(0,78,137,0.85), rgba(26,101,158,0.85)), url('../images/hero-background.jpg');
+    background-image: linear-gradient(rgba(0,86,179,0.85), rgba(0,123,255,0.85)), url('../images/family.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -360,6 +369,13 @@ a:hover {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-free-trial {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
 }
 
 .hero-scroll {
@@ -1535,7 +1551,66 @@ textarea.form-control {
 }
 
 /* ===================================
-   21. RESPONSIVE DESIGN
+   21. FREE TRIAL BANNER
+   =================================== */
+.free-trial-banner {
+    background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,86,179,0.1));
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding: 30px 0;
+}
+
+.free-trial-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.free-trial-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.free-trial-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.free-trial-text h3 {
+    margin: 0 0 5px 0;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.free-trial-text p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.free-trial-cta .btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .free-trial-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .free-trial-icon {
+        font-size: 2.5rem;
+    }
+    
+    .free-trial-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===================================
+   22. RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 1024px) {
     h1 { font-size: 2.5rem; }
