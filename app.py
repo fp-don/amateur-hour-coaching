@@ -88,7 +88,7 @@ def testimonials():
     return render_template('testimonials.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
-@limiter.limit("5 per hour")  # Limit contact form submissions to 5 per hour per IP
+@limiter.limit("20 per hour")  # Limit contact form submissions to 20 per hour per IP
 def contact():
     """Contact page route with form handling"""
     if request.method == 'POST':

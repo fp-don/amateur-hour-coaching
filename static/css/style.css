@@ -1273,7 +1273,7 @@ textarea.form-control {
 .social-link {
     width: 40px;
     height: 40px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: var(--primary-color);  /* Solid blue */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1632,6 +1632,15 @@ textarea.form-control {
     .cta-buttons { flex-direction: column; align-items: center; }
     .consultation-box .row { flex-direction: column; }
     .consultation-box .text-right { text-align: center; margin-top: 20px; }
+    
+    /* Mobile hero background - use triathlon training image */
+    .hero {
+        background: linear-gradient(rgba(0,86,179,0.85), rgba(0,123,255,0.85)), url('../images/triathlon-training.jpg') !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+    }
 }
 
 @media (max-width: 480px) {
