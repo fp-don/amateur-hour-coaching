@@ -1546,8 +1546,8 @@ textarea.form-control {
 
 /* Order utilities for responsive design */
 @media (max-width: 768px) {
-    .order-md-1 { order: 1; }
-    .order-md-2 { order: 2; }
+    .order-md-1 { order: 2; }
+    .order-md-2 { order: 1; }
 }
 
 /* ===================================
