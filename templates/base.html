@@ -6,10 +6,16 @@
     <meta name="description" content="{% block meta_description %}AmateurHour Coaching - Dayton, Ohio fitness trainer and triathlon coach. Personalized running training, marathon coaching, and fitness programs. ACSM-certified Exercise Physiologist serving Dayton, OH area.{% endblock %}">
     <meta name="keywords" content="fitness trainer Dayton Ohio, fitness coaching Dayton OH, running training Dayton, triathlon coach Dayton, marathon training Dayton Ohio, personal trainer Dayton, fitness coach near me, running coach Dayton OH, triathlon training Dayton, road race training, ACSM exercise physiologist, USAT triathlon coach, AmateurHour Coaching, Dayton fitness">
     <meta name="author" content="AmateurHour Coaching">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en-US">
+    <meta name="theme-color" content="#007bff">
     <meta name="geo.region" content="US-OH">
     <meta name="geo.placename" content="Dayton">
     <meta name="geo.position" content="39.7589;-84.1916">
     <meta name="ICBM" content="39.7589, -84.1916">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.url }}">
     
     <title>{% block title %}AmateurHour Coaching - Personalized Fitness & Triathlon Training in Dayton, Ohio{% endblock %}</title>
     
@@ -65,22 +71,8 @@
             "latitude": 39.7589,
             "longitude": -84.1916
         },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-            ],
-            "opens": "08:00",
-            "closes": "18:00"
-        },
         "sameAs": [
-            "",
-            "",
-            ""
+            "https://www.instagram.com/amateurhourathlete"
         ],
         "priceRange": "$$",
         "description": "Professional fitness trainer and triathlon coach in Dayton, Ohio. Offering personalized running training, marathon coaching, triathlon programs, and custom fitness plans. ACSM-certified Exercise Physiologist and USAT Level I Triathlon Coach."
@@ -175,7 +167,7 @@
                     <h3>AmateurHour Coaching</h3>
                     <p>Personalized training programs for triathlons, road races, and overall fitness. Led by ACSM-certified Exercise Physiologist and USAT Triathlon Coach Alyssa.</p>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/amateurhourathlete" target="_blank" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/amateurhourathlete" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
