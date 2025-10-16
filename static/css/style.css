@@ -1635,7 +1635,7 @@ textarea.form-control {
     
     /* Mobile hero background - use triathlon training image */
     .hero {
-        background: linear-gradient(rgba(0,86,179,0.85), rgba(0,123,255,0.85)), url('../images/triathlon-training.jpg') !important;
+        background: url('../images/triathlon-training.jpg') !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;

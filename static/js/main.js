@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 16. PRINT CONSOLE WELCOME MESSAGE
     // ===================================
     console.log('%c🏃‍♂️ AmateurHour Coaching', 'font-size: 20px; font-weight: bold; color: #1A659E;');
-    console.log('%cWebsite built with ❤️ by FrostPalm Technologies LLC', 'font-size: 12px; color: #004E89;');
+    console.log('%cWebsite by FrostPalm Technologies LLC', 'font-size: 12px; color: #004E89;');
     
 });
 
